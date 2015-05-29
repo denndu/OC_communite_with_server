@@ -18,10 +18,13 @@
     //code process
     return output;
 }
--(BOOL)responseAnthentic:(id)response{
+-(BOOL)responseAuthentic:(id)response{
     //analyse
     
     
+    return true;
+}
+-(BOOL)resultAuthentic:(id)response{
     return true;
 }
 -(NSString*)processApi:(NSString *)api{

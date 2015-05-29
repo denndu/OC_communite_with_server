@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,59 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkK-qT-F7M">
+                                <rect key="frame" x="263" y="254" width="74" height="30"/>
+                                <state key="normal" title="sendPOST">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendPOST:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3Xb-Y6-OMC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqd-MV-xdL">
+                                <rect key="frame" x="269" y="306" width="63" height="30"/>
+                                <state key="normal" title="sendGET">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendGET:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zcc-Yp-Wz1"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="OkK-qT-F7M" secondAttribute="centerX" id="2Ev-jW-ORT"/>
+                            <constraint firstAttribute="centerY" secondItem="wqd-MV-xdL" secondAttribute="centerY" id="9HU-er-8Jd"/>
+                            <constraint firstAttribute="centerY" secondItem="OkK-qT-F7M" secondAttribute="centerY" id="BcC-EY-TU7"/>
+                            <constraint firstItem="wqd-MV-xdL" firstAttribute="top" secondItem="OkK-qT-F7M" secondAttribute="bottom" constant="10" id="Bid-lc-qwG"/>
+                            <constraint firstItem="OkK-qT-F7M" firstAttribute="centerX" secondItem="wqd-MV-xdL" secondAttribute="centerX" id="CIR-q4-a9I"/>
+                            <constraint firstItem="OkK-qT-F7M" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="M7s-eL-uax"/>
+                            <constraint firstItem="OkK-qT-F7M" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="247" id="TUC-OG-IYx"/>
+                            <constraint firstAttribute="centerY" secondItem="OkK-qT-F7M" secondAttribute="centerY" id="YZn-qP-sMW"/>
+                            <constraint firstItem="wqd-MV-xdL" firstAttribute="top" secondItem="OkK-qT-F7M" secondAttribute="bottom" constant="8" symbolic="YES" id="agH-2f-7WB"/>
+                            <constraint firstAttribute="centerX" secondItem="OkK-qT-F7M" secondAttribute="centerX" id="dJP-EU-bAE"/>
+                            <constraint firstItem="OkK-qT-F7M" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="258" id="mox-AT-FUe"/>
+                            <constraint firstAttribute="centerX" secondItem="wqd-MV-xdL" secondAttribute="centerX" id="ysw-Iq-V1F"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2Ev-jW-ORT"/>
+                                <exclude reference="BcC-EY-TU7"/>
+                                <exclude reference="CIR-q4-a9I"/>
+                                <exclude reference="M7s-eL-uax"/>
+                                <exclude reference="TUC-OG-IYx"/>
+                                <exclude reference="YZn-qP-sMW"/>
+                                <exclude reference="mox-AT-FUe"/>
+                                <exclude reference="Bid-lc-qwG"/>
+                                <exclude reference="agH-2f-7WB"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="189" y="416"/>
         </scene>
     </scenes>
 </document>

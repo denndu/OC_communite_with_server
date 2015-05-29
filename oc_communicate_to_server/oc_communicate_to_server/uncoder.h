@@ -16,6 +16,6 @@
 
 -(NSDictionary*)uncodeDicProcess:(NSDictionary*)input;
 
--(BOOL)responseAnthentic:(id) response;
-
+-(BOOL)responseAuthentic:(id) response;
+-(BOOL)resultAuthentic:(id) response;
 @end

@@ -31,7 +31,6 @@ static NSMutableArray* NO_CACHE_API;
 
 @property(strong,nonatomic)void(^failHandler)(NSDictionary* response);
 
-@property(strong,nonatomic)AFHTTPRequestOperationManager* manager;
 
 +(instancetype)initWithAPI:(NSString*)api
                     method:(METHOD_TYPE)method

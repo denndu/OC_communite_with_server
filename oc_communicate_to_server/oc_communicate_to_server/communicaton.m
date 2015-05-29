@@ -10,6 +10,10 @@
 
 @interface communicaton()
 
+@property(strong,nonatomic)AFHTTPRequestOperationManager* manager;
+
+@property(strong,nonatomic)AFHTTPRequestOperation* operation;
+
 @property(nonatomic,strong)NSString* cacheKey;
 
 @property(nonatomic)BOOL needCache;
@@ -74,7 +78,9 @@
         uncoder* unc=[[uncoder alloc] init];
 #warning 目前默认缓存的也是密文
         NSDictionary* resultResponse=[unc uncodeDicProcess:response];
+        if (_successHandler!=nil) {
         _successHandler(resultResponse);
+        }
     }
     
 #pragma mark 构建请求体
@@ -94,17 +100,27 @@
     NSDictionary* resultParam=[unc codeDicProcess:_params];
     
     
-    
+#warning 缺失检查网络连接code
     
     void(^success)(AFHTTPRequestOperation*,id)=^(AFHTTPRequestOperation *operation,id responseObject){
-        if ([unc responseAnthentic:responseObject]) {
-            _successHandler(responseObject);
+        if ([unc responseAuthentic:responseObject]) {
+            if ([unc resultAuthentic:responseObject]) {
+                if (_successHandler!=nil) {
+                    _successHandler(responseObject);
+                }
+            }else{
+                if (_failHandler!=nil) {
+                    _failHandler(responseObject);
+                }
+            }
         }
     };
     
     void(^failure)(AFHTTPRequestOperation *operation, NSError *error)=^(AFHTTPRequestOperation *operation, NSError *error){
         
         NSLog(@"request failed");
+        NSInteger ecode=operation.response.statusCode;
+        NSLog(@"The ecode=%ld,error:%@",ecode,error);
     };
     
     
