@@ -10,13 +10,7 @@
 
 @implementation uncoder
 
--(NSString*)codeApiProcess:(NSString *)input{
-    NSString* output;
-    output=input;
-    
-    //code process
-    return output;
-}
+
 -(NSDictionary*)codeDicProcess:(NSDictionary *)input{
     NSDictionary* output;
     output=input;
@@ -29,5 +23,15 @@
     
     
     return true;
+}
+-(NSString*)processApi:(NSString *)api{
+    NSString* resultApi;
+    resultApi=api;
+    return api;
+}
+-(NSDictionary*)uncodeDicProcess:(NSDictionary *)input{
+    NSDictionary* resultDic;
+    resultDic=input;
+    return resultDic;
 }
 @end

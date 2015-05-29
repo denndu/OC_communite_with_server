@@ -1,1 +1,2 @@
 pod 'AFNetworking', '~> 2.5.4'
+pod 'TMCache', '~> 2.1.0'

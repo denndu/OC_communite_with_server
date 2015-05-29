@@ -11,10 +11,14 @@
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
 #import "uncoder.h"
+#import "TMCache.h"
 typedef  NS_ENUM(NSInteger, METHOD_TYPE) {
     POST=1,
     GET=2,
 };
+
+static NSMutableArray* NO_CACHE_API;
+
 @interface communicaton : NSObject
 
 @property(strong,nonatomic)NSString* api;
@@ -23,18 +27,20 @@ typedef  NS_ENUM(NSInteger, METHOD_TYPE) {
 
 @property(nonatomic,strong)NSDictionary* params;
 
-@property(strong,nonatomic)void(^successHandler)(id response);
+@property(strong,nonatomic)void(^successHandler)(NSDictionary* response);
 
-@property(strong,nonatomic)void(^failHandler)(id response);
+@property(strong,nonatomic)void(^failHandler)(NSDictionary* response);
 
 @property(strong,nonatomic)AFHTTPRequestOperationManager* manager;
 
--(instancetype)initWithAPI:(NSString*)api
++(instancetype)initWithAPI:(NSString*)api
                     method:(METHOD_TYPE)method
                     params:(NSDictionary*)params;
-
--(void)setSuccessHandler:(void (^)(id))successHandler;
--(void)setFailHandler:(void (^)(id))failHandler;
++(void)setNoCacheApis:(NSMutableArray*) array;
+-(void)setSuccessHandler:(void (^)(NSDictionary* response))successHandler;
+-(void)setFailHandler:(void (^)(NSDictionary* response))failHandler;
 -(void)request;
+
+
 
 @end

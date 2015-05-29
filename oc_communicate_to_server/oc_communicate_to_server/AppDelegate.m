@@ -16,7 +16,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    communicaton* http=[communicaton initWithAPI:@"APITest/test" method:GET params:@{@"param1":@"123"}];
+    [http setSuccessHandler:^(NSDictionary *response) {
+        NSLog(@"成功后操作");
+    }];
+    [http setFailHandler:^(NSDictionary *response) {
+        NSLog(@"失败后操作");
+    }];
+    [http request];
+    
     return YES;
 }
 
