@@ -124,7 +124,7 @@
     };
     
     
-    
+    NSLog(@"final url=%@",resultApi);
     [_manager GET:resultApi  parameters:resultParam success:success failure:failure];
 
 

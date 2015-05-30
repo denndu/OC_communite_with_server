@@ -19,9 +19,7 @@
     return output;
 }
 -(BOOL)responseAuthentic:(id)response{
-    //analyse
-    
-    
+        
     return true;
 }
 -(BOOL)resultAuthentic:(id)response{
@@ -29,8 +27,8 @@
 }
 -(NSString*)processApi:(NSString *)api{
     NSString* resultApi;
-    resultApi=api;
-    return api;
+    resultApi=[NSString stringWithFormat:@"http://192.168.3.11:8080/tongbanServer/%@",api];
+    return resultApi;
 }
 -(NSDictionary*)uncodeDicProcess:(NSDictionary *)input{
     NSDictionary* resultDic;
