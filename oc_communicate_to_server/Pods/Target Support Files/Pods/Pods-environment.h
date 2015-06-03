@@ -48,9 +48,17 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 4
 
+<<<<<<< HEAD
 // AKTabBarController
 #define COCOAPODS_POD_AVAILABLE_AKTabBarController
 #define COCOAPODS_VERSION_MAJOR_AKTabBarController 1
 #define COCOAPODS_VERSION_MINOR_AKTabBarController 1
 #define COCOAPODS_VERSION_PATCH_AKTabBarController 0
+=======
+// TMCache
+#define COCOAPODS_POD_AVAILABLE_TMCache
+#define COCOAPODS_VERSION_MAJOR_TMCache 2
+#define COCOAPODS_VERSION_MINOR_TMCache 1
+#define COCOAPODS_VERSION_PATCH_TMCache 0
+>>>>>>> 17b387dc73c9845af7b603762bfcfe0b96210a29
 

@@ -10,10 +10,12 @@
 
 @interface uncoder : NSObject
 
--(NSString*)codeApiProcess:(NSString*)input;
+-(NSString*)processApi:(NSString*)api;
 
 -(NSDictionary*)codeDicProcess:(NSDictionary*)input;
 
--(BOOL)responseAnthentic:(id) response;
+-(NSDictionary*)uncodeDicProcess:(NSDictionary*)input;
 
+-(BOOL)responseAuthentic:(id) response;
+-(BOOL)resultAuthentic:(id) response;
 @end

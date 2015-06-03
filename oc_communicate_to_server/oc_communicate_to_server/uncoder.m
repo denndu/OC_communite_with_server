@@ -10,13 +10,7 @@
 
 @implementation uncoder
 
--(NSString*)codeApiProcess:(NSString *)input{
-    NSString* output;
-    output=input;
-    
-    //code process
-    return output;
-}
+
 -(NSDictionary*)codeDicProcess:(NSDictionary *)input{
     NSDictionary* output;
     output=input;
@@ -24,10 +18,21 @@
     //code process
     return output;
 }
--(BOOL)responseAnthentic:(id)response{
-    //analyse
-    
-    
+-(BOOL)responseAuthentic:(id)response{
+        
     return true;
+}
+-(BOOL)resultAuthentic:(id)response{
+    return true;
+}
+-(NSString*)processApi:(NSString *)api{
+    NSString* resultApi;
+    resultApi=[NSString stringWithFormat:@"http://192.168.3.11:8080/tongbanServer/%@",api];
+    return resultApi;
+}
+-(NSDictionary*)uncodeDicProcess:(NSDictionary *)input{
+    NSDictionary* resultDic;
+    resultDic=input;
+    return resultDic;
 }
 @end
