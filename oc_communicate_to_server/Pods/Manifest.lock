@@ -20,11 +20,14 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - AKTabBarController (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.4)
+  - AKTabBarController (~> 1.1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  AKTabBarController: 6a250b798852e58a663a3bc438b400fedb82c20f
 
 COCOAPODS: 0.37.1

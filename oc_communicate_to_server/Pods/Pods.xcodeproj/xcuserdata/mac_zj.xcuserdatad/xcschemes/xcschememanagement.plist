@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-AKTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6718A070E8A34335FF574DEA</key>
+		<key>5D22B3C919F99881B5F33ABB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7B93A1817B84F63127721EE</key>
+		<key>AF142BD414F535C4B338656E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4F32A24F0B044D29FD07BFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

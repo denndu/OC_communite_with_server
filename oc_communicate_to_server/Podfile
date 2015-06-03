@@ -1,1 +1,2 @@
 pod 'AFNetworking', '~> 2.5.4'
+pod 'AKTabBarController', '~> 1.1.0'

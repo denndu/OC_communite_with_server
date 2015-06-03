@@ -48,3 +48,9 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 4
 
+// AKTabBarController
+#define COCOAPODS_POD_AVAILABLE_AKTabBarController
+#define COCOAPODS_VERSION_MAJOR_AKTabBarController 1
+#define COCOAPODS_VERSION_MINOR_AKTabBarController 1
+#define COCOAPODS_VERSION_PATCH_AKTabBarController 0
+
